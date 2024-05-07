@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #080808; /* Dark red theme */
+  color: black ;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Make the body take up the full height of the viewport */
+}
+
+.stopwatch-container {
+  display: flex;
+  flex-direction: column;  
+} .stopwatch-heading {
+  color: #dcdcdc; /* Light gray color similar to the moon */ padding: 40px; font-size: 50px;
+}
+
+.stopwatch {
+  display: flex;
+  justify-content: space-around; /* Evenly space the circles */
+}
+
+.circle {
+  width: 200px; /* Increase size */
+  height: 200px; /* Increase size */
+  background-color: transparent; padding: 20px  ; 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px; /* Increase font size */
+  background: linear-gradient(135deg, #9c9595, #0c0c0c); /* Gradient color */
+  box-shadow: 0 0 20px rgba(0,0,0.2 );  animation: fadeIn 1s forwards 0.2s;transition: all; 
+}
+
+.circle:hover {
+  background: linear-gradient(135deg, #7e7676, #000000); /* Gradient color on hover */  background-color: #000000; /* Change background color to black on hover */ box-shadow: 0 0 20px rgba(252, 255, 252, 0.5);
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  background-color: #9c9595;
+  color: black ;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #443f3f; box-shadow: 0 0 20px rgba(252, 255, 252, 0.5);
+}
+
+.laps-container {
+  margin-top: 20px; color: white;
+}
+
+#laps {
+  list-style-type: none;
+  padding: 0;
+}
+
+#laps li {
+  margin-bottom: 5px;
+}
+.stopwatch-container video{ position: absolute; right: 0; bottom: 0; z-index: -1; }  @media(min-aspect-ratio:16/9){.stopwatch-container video {width: 100%; height: auto; }}
